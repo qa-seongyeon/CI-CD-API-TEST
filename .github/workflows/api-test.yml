@@ -15,7 +15,9 @@ jobs:
         with:
           python-version: "3.x"
 
-      - run: pip install pytest requests playwright
+      - run: pip install pytest requests pytest-playwright
+
+      - run: playwright install --with-deps chromium
 
       - run: pytest test_reqres_api.py -v
 
