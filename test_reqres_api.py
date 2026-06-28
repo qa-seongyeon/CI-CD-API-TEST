@@ -13,3 +13,8 @@ def test_get_single_user():
     data = response.json()["data"]
     assert data["id"] == 2
 
+#없는 유저 조회
+def test_get_nonexistent_user():
+    response = requests.get(f"{BASE_URL}/users/23", headers={"x-api-key": API_KEY})
+
+    assert response.status_code == 404
