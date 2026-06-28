@@ -7,7 +7,6 @@ STANDARD_USER = "standard_user"
 LOCKED_OUT_USER = "locked_out_user"
 VALID_PASSWORD = "secret_sauce"
 
-
 def test_login_success(page: Page):
     page.goto(BASE_URL)
 
