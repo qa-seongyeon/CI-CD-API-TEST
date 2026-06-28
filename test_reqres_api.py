@@ -17,5 +17,5 @@ def test_get_single_user():
 def test_get_nonexistent_user():
     response = requests.get(f"{BASE_URL}/users/23", headers={"x-api-key": API_KEY})
 
-    assert response.status_code == 200
+    assert response.status_code == 404
 
