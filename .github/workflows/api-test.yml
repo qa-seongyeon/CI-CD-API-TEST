@@ -15,6 +15,8 @@ jobs:
         with:
           python-version: "3.x"
 
-      - run: pip install pytest requests
+      - run: pip install pytest requests playwright
 
       - run: pytest test_reqres_api.py -v
+
+      - run: pytest API_Test.py -v
